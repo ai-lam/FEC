@@ -235,7 +235,7 @@ class ReviewList extends React.Component {
       let moreReviewsButton;
       if (
         reviews.length > 2 &&
-        lastReview["review_id"] !== lastShowingReview["review_id"]
+        lastReview["review_id"] !== lastShowingReview["review_id"];
       ) {
         moreReviewsButton = (
           <MoreReviews showMoreReviewsFunc={this.showMoreReviewsFunc} />
@@ -244,7 +244,8 @@ class ReviewList extends React.Component {
 
       return (
         <div>
-          Search for reviews: <input type="text" onChange={(e) => { this.props.searchReviewFunc(e.target.value); }}></input>
+          {/* Search for reviews: <input type="text" onChange={(e) => { this.props.searchReviewFunc(e.target.value); }}></input> */}
+          <div id="searchReviewMsg"></div>
           {reviewsHeading}
           {addFirstReviewButton}
           {reviewModalComponent}

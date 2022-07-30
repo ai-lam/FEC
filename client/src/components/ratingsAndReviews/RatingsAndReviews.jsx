@@ -25,7 +25,7 @@ class RatingsAndReviews extends React.Component {
       ratedStars: null,
     };
     this.filterRatingFunc = this.filterRatingFunc.bind(this);
-    this.searchReviewFunc = this.searchReviewFunc.bind(this);
+    // this.searchReviewFunc = this.searchReviewFunc.bind(this);
   }
 
   componentDidMount() {
@@ -146,24 +146,31 @@ class RatingsAndReviews extends React.Component {
     }
   }
 
-  searchReviewFunc(e) {
-    console.log(e)
-    const rawReviews = this.props.reviews;
-    const currentReviews = this.state.slice();
-    const searchedReviews = [];
+  // searchReviewFunc(e) {
+  //   console.log(e)
+  //   const rawReviews = this.props.reviews;
+  //   const currentReviews = this.state.reviews.slice();
+  //   const searchedReviews = [];
 
-    if (e.length >= 3) {
-      currentReviews.forEach(currentReview => {
-        if (currentReview.summary.includes(e) || currentReview.body.includes(e)) {
-          searchedReviews.push(currentReview);
-        }
-      });
+  //   if (e.length >= 3) {
+  //     currentReviews.forEach(currentReview => {
+  //       if (currentReview.summary.includes(e) || currentReview.body.includes(e)) {
+  //         searchedReviews.push(currentReview);
+  //       }
+  //     });
 
-      if (!seachedReviews.length) {
+  //     if (!searchedReviews.length) {
+  //       document.getElementById('searchReviewMsg').innerHTML = 'There are no reviews with this keyword';
+  //     } else {
+  //       document.getElementById('searchReviewMsg').innerHTML = '';
+  //       this.setState({reviews: searchedReviews});
+  //     }
+  //   }
 
-      }
-    }
-  }
+  //   if (e.length < 3) {
+
+  //   }
+  // }
 
   render() {
     // console.log('productinfo', this.props.productInfo)
