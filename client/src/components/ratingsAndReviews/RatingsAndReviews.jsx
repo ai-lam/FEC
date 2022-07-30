@@ -133,9 +133,7 @@ class RatingsAndReviews extends React.Component {
           filteredReviews.push(review);
         }
       });
-      document.getElementById(
-        "filterRatingMessage"
-      ).innerHTML = `Current star rating filters: ${currentStars.join(", ")}`;
+      document.getElementById("filterRatingMessage").innerHTML = `Current star rating filters: ${currentStars.join(", ")}`;
       this.setState({
         reviews: filteredReviews,
         clickedStars: currentStars,
